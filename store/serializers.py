@@ -11,9 +11,9 @@ class StoreSerializer(serializers.HyperlinkedModelSerializer):
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Product
-        fields = ['url', 'product_name']
+        fields = ['url', 'company_name', 'product_name']
 
 class PurchaseSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Purchase
-        fields = ['url','id','company_name']
+        fields = ['url','id','company_name','product_name', 'purchase_rate', 'purchase_quantity']
